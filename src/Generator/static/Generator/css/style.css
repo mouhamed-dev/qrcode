@@ -17,20 +17,6 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
-}
-
 .qr-container {
     transition: all 0.3s ease;
 }
@@ -60,3 +46,21 @@ body {
 .fade-in {
     animation: fadeIn 0.5s ease-out;
 }
+
+/* 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6e2e2;
+} */
