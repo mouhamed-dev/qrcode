@@ -138,7 +138,9 @@
             downloadBtn.style.display = 'none';
             resetBtn.style.display = 'none';
             
-            window.history.replaceState({}, document.title, window.location.pathname);
+            const cleanUrl = window.location.origin + window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+            window.location.reload(true);
         });
     </script>
 </body>
