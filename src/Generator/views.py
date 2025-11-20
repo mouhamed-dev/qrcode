@@ -5,9 +5,9 @@ def index(request):
     context = {}
     if request.method == "POST":
         data = request.POST.get("lien")
-        obj = QR_code.objects.create(data=data)
-        qr_code = obj.qr_code
-
+        logo = request.FILES.get("logo")
+        obj = QR_code.objects.create(data=data, logo=logo)
+        
         return redirect(f"/?qr={obj.token}")
 
     token = request.GET.get("qr")
