@@ -24,6 +24,15 @@
             }
         }
     </script>
+
+    <!-- Open graph -->
+     <meta property="og:title" content="Générateur de QR Code" />
+    <meta property="og:description" content="Créez des codes QR instantanément et gratuitement sans limite." />
+    <meta property="og:image" content="https://qrcode.mouhatech.com/static/Generator/images/qr_code.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qrcode.mouhatech.com/" />
+    <meta property="og:site_name" content="Générateur de QR Code" />
+
     <link rel="icon" type="image/png" href="{% static 'Generator/images/qr_code.png' %}">
     <link rel="stylesheet" href=" {% static 'Generator/css/style.css' %}">
     <title>Générateur de QR Code</title>
@@ -76,6 +85,7 @@
                             <img src="{{ qr_code.url }}" id="qrcode" alt="QR Code" class="w-full h-auto object-contain">
                             {% endif %}
                         </div>
+                        {% if qr_code %}
                         <div class="flex gap-3 flex-wrap justify-center">
                             <button id="downloadBtn" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium flex items-center gap-2">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,6 +100,7 @@
                                 Réinitialiser
                             </button>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -126,7 +137,7 @@
             qrcode.innerHTML = '';
             downloadBtn.style.display = 'none';
             resetBtn.style.display = 'none';
-
+            
             window.history.replaceState({}, document.title, window.location.pathname);
         });
     </script>
