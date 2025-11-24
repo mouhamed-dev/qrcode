@@ -14,7 +14,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#007bff',
+                        primary: '#163e5d',
                         secondary: '#6c757d',
                     },
                     fontFamily: { 
@@ -65,7 +65,7 @@
                 </div>
 
                 <!-- bouton generate -->
-                <button type="submit" id="generateBtn" class="w-full py-3 px-6 rounded-xl text-white font-semibold text-lg shadow-lg" style="background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);">
+                <button type="submit" id="generateBtn" class="w-full py-3 px-6 rounded-xl text-white font-semibold text-lg shadow-lg" style="background: linear-gradient(135deg, #163e5d 0%, #163e5d 100%);">
                     <span class="flex items-center justify-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -80,7 +80,7 @@
                 <div class="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
                     <h2 class="text-xl font-semibold text-gray-700 mb-4 text-center">Votre QR Code</h2>
                     <div class="flex flex-col items-center space-y-4">
-                        <div id="qrcode" class="p-4 rounded-lg shadow-md bg-gradient-to-br from-[#764ba2] to-[#667eea] max-w-xs mx-auto">
+                        <div id="qrcode" class="p-4 rounded-lg shadow-md bg-gradient-to-br from-[#163e5d] to-[#163e5d] max-w-xs mx-auto">
                             {% if qr_code %}
                             <img src="{{ qr_code.url }}" id="qrcode" alt="QR Code" class="w-full h-auto object-contain">
                             {% endif %}
