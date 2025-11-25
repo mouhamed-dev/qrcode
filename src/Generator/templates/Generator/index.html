@@ -123,6 +123,7 @@
         const downloadBtn = document.getElementById('downloadBtn');
         const resetBtn = document.getElementById('resetBtn');
         const form = document.getElementById('qrForm');
+        const qrContainer = document.getElementById('qrContainer');
 
         downloadBtn.addEventListener('click', function() {
             const qrCodeImage = qrcode.querySelector('img');
@@ -138,6 +139,7 @@
             qrcode.innerHTML = '';
             downloadBtn.style.display = 'none';
             resetBtn.style.display = 'none';
+            qrContainer.style.display = 'none';
             
             const cleanUrl = window.location.origin + window.location.pathname;
             window.history.replaceState({}, document.title, cleanUrl);
