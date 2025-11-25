@@ -76,6 +76,7 @@
             </form>
 
             <!-- Section QR Code -->
+            {% if qr_code %}
             <div id="qrContainer" class="mt-8 qr-container">
                 <div class="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
                     <h2 class="text-xl font-semibold text-gray-700 mb-4 text-center">Votre QR Code</h2>
@@ -104,10 +105,11 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
 
         <!-- Footer -->
-        <div class="text-center mt-6 text-white/80 text-sm">
+        <div class="text-center mt-16 text-white/80 text-sm">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p>Générateur de QR Code gratuit et sans limite</p>
                 <p>Developpé par <a href="https://mouhatech.com" target="_blank"><span class="text-white font-bold">MouhaTech</span></a></p>
